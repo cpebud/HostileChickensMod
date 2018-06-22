@@ -1,4 +1,4 @@
-itemGroup.HCMTAB=Hostile Chicken Mod
+itemGroup.hcmtab=Hostile Chicken Mod
 
 tile.egg_giantoverworld.name=Giant Chicken Egg
 tile.nest_overworld.name=Nest
@@ -17,3 +17,4 @@ item.egg_poison.name=Poison Egg
 item.egg_skeleton.name=Skeleton Egg
 item.egg_undead.name=Undead Egg
 item.egg_wither.name=Wither Egg
+item.launcher_basic.name=Chicken Launcher

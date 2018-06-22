@@ -16,23 +16,13 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.world.World;
 
-public abstract class ItemEggBase extends Item
+public abstract class ItemEggBase extends ItemBase
 {
-    public ItemEggBase(String name)
-    {
-    	setUnlocalizedName(name);
-    	setRegistryName(name);
-    	setCreativeTab(Main.HCMTAB);
-    	setMaxStackSize(16);
-    	
-    	ItemInit.ITEMS.add(this);
-    }
-    
-	public void registerModels()
+	public ItemEggBase(String name)
 	{
-		Main.proxy.registerItemRenderer(this, 0, "inventory");
+		super(name);
 	}
-	
+
 	protected abstract void setEggThrown(World worldIn, EntityPlayer playerIn);
 	
 	

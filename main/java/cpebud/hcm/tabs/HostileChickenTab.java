@@ -8,7 +8,7 @@ public class HostileChickenTab extends CreativeTabs
 {
 	public HostileChickenTab(String label)
 	{
-		super("HCMTAB");
+		super("hcmtab");
 	    this.setBackgroundImageName("hostilechickentab.png");
 	}
 	

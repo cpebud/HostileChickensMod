@@ -1,7 +1,7 @@
 [
 {
   "modid": "hcm",
-  "name": "Hostile Chicken Mod",
+  "name": "Hostile Chickens Mod",
   "description": "This is the first part of the Chicken Launcher Mod. Making in pieces for organization.",
   "version": "${0.1}",
   "mcversion": "${1.12.2}",

@@ -12,12 +12,15 @@ import cpebud.hcm.objects.items.ItemEggPoison;
 import cpebud.hcm.objects.items.ItemEggSkeleton;
 import cpebud.hcm.objects.items.ItemEggUndead;
 import cpebud.hcm.objects.items.ItemEggWither;
+import cpebud.hcm.objects.items.ItemLauncherBasic;
 import net.minecraft.item.Item;
 
 public class ItemInit
 {
 	//Items
     public static final List<Item> ITEMS = new ArrayList<Item>();
+    
+    public static final Item LAUNCHER_BASIC = new ItemLauncherBasic("launcher_basic");
     
     //Eggs
     public static final Item EGG_ENDER = new ItemEggEnder("egg_ender");
