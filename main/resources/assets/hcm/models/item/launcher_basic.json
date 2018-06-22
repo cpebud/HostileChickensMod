@@ -1,4 +1,4 @@
-{   "parent": "hcm:item/launcher_basic"
+{
     "__comment": "Model generated using MrCrayfish's Model Creator (http://mrcrayfish.com/modelcreator/)",
     "textures": {
         "0": "blocks/cauldron_inner",
