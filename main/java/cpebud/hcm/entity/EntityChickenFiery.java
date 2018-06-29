@@ -2,6 +2,7 @@ package cpebud.hcm.entity;
 
 import javax.annotation.Nullable;
 
+import cpebud.hcm.entity.ai.EntityAIAttackMeleeIfNotSafe;
 import cpebud.hcm.init.ItemInit;
 import net.minecraft.entity.EntityAgeable;
 import net.minecraft.entity.EntityLivingBase;
@@ -171,7 +172,7 @@ public class EntityChickenFiery extends EntityChickenBase
             public boolean shouldExecute()
             {
                 EntityLivingBase entitylivingbase = this.blaze.getAttackTarget();
-                return entitylivingbase != null && entitylivingbase.isEntityAlive();
+                return entitylivingbase != null && entitylivingbase.isEntityAlive() && !this.blaze.isSafe();
             }
 
             /**

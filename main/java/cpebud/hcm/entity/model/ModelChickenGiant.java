@@ -3,7 +3,9 @@ package cpebud.hcm.entity.model;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
-
+/*
+ * Not Being Used.
+ */
 /**
  * ModelGiantChicken - cpebud
  * Created using Tabula 7.0.0

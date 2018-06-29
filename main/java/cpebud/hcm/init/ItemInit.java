@@ -3,16 +3,16 @@ package cpebud.hcm.init;
 import java.util.ArrayList;
 import java.util.List;
 
-import cpebud.hcm.objects.items.ItemEggBase;
-import cpebud.hcm.objects.items.ItemEggEnder;
-import cpebud.hcm.objects.items.ItemEggExplosive;
-import cpebud.hcm.objects.items.ItemEggFiery;
-import cpebud.hcm.objects.items.ItemEggGhastly;
-import cpebud.hcm.objects.items.ItemEggPoison;
-import cpebud.hcm.objects.items.ItemEggSkeleton;
-import cpebud.hcm.objects.items.ItemEggUndead;
-import cpebud.hcm.objects.items.ItemEggWither;
-import cpebud.hcm.objects.items.ItemLauncherBasic;
+import cpebud.hcm.objects.items.eggs.ItemEggBase;
+import cpebud.hcm.objects.items.eggs.ItemEggEnder;
+import cpebud.hcm.objects.items.eggs.ItemEggExplosive;
+import cpebud.hcm.objects.items.eggs.ItemEggFiery;
+import cpebud.hcm.objects.items.eggs.ItemEggGhastly;
+import cpebud.hcm.objects.items.eggs.ItemEggPoison;
+import cpebud.hcm.objects.items.eggs.ItemEggSkeleton;
+import cpebud.hcm.objects.items.eggs.ItemEggUndead;
+import cpebud.hcm.objects.items.eggs.ItemEggWither;
+import cpebud.hcm.objects.items.launcher.ItemLauncherBasic;
 import net.minecraft.item.Item;
 
 public class ItemInit

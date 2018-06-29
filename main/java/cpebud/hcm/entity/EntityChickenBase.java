@@ -30,6 +30,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.pathfinding.PathNodeType;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.EnumHand;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.datafix.DataFixer;
@@ -65,6 +66,20 @@ public abstract class EntityChickenBase extends EntityHostileAnimal
         this.setSize(0.4F, 0.7F);
         this.timeUntilNextEgg = this.rand.nextInt(6000) + 6000;
         this.setPathPriority(PathNodeType.WATER, 0.0F);
+    }
+    
+    
+    
+    public boolean isSafe()
+    {
+    	EntityLivingBase target = this.getAttackTarget();
+    	if (target != null)
+    	{
+    	    ItemStack mainhand = this.getAttackTarget().getHeldItemMainhand();
+    	    ItemStack offhand = this.getAttackTarget().getHeldItemOffhand();
+    	
+            return (!mainhand.isEmpty() && this.isBreedingItem(mainhand) || (!offhand.isEmpty() && this.isBreedingItem(offhand)));
+    	}else return false;
     }
 
     public float getEyeHeight()

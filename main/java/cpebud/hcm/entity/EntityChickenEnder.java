@@ -8,6 +8,7 @@ import com.google.common.base.Function;
 import com.google.common.base.Optional;
 import com.google.common.base.Predicate;
 
+import cpebud.hcm.entity.ai.EntityAIAttackMeleeIfNotSafe;
 import cpebud.hcm.init.ItemInit;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityAgeable;
@@ -68,7 +69,7 @@ public class EntityChickenEnder extends EntityChickenBase
     protected void initEntityAI()
     {
         this.tasks.addTask(0, new EntityAISwimming(this));
-        this.tasks.addTask(2, new EntityAIAttackMelee(this, 1.0D, false));
+        this.tasks.addTask(2, new EntityAIAttackMeleeIfNotSafe(this, 1.0D, false));
         this.tasks.addTask(7, new EntityAIWanderAvoidWater(this, 1.0D, 0.0F));
         this.tasks.addTask(8, new EntityAIWatchClosest(this, EntityPlayer.class, 8.0F));
         this.tasks.addTask(8, new EntityAILookIdle(this));

@@ -2,6 +2,7 @@ package cpebud.hcm.entity;
 
 import java.util.Collection;
 
+import cpebud.hcm.entity.ai.EntityAIAttackMeleeIfNotSafe;
 import cpebud.hcm.entity.ai.EntityAIChickenSwell;
 import cpebud.hcm.init.ItemInit;
 import net.minecraft.entity.Entity;
@@ -28,6 +29,7 @@ import net.minecraft.network.datasync.DataSerializers;
 import net.minecraft.network.datasync.EntityDataManager;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
+import net.minecraft.util.EnumHand;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
@@ -67,7 +69,7 @@ public class EntityChickenExplosive extends EntityChickenBase
         this.tasks.addTask(1, new EntityAISwimming(this));
         this.tasks.addTask(2, new EntityAIChickenSwell(this));
         this.tasks.addTask(3, new EntityAIAvoidEntity(this, EntityOcelot.class, 6.0F, 1.0D, 1.2D));
-        this.tasks.addTask(4, new EntityAIAttackMelee(this, 1.0D, false));
+        this.tasks.addTask(4, new EntityAIAttackMeleeIfNotSafe(this, 1.0D, false));
         this.tasks.addTask(5, new EntityAIWanderAvoidWater(this, 0.8D));
         this.tasks.addTask(6, new EntityAIWatchClosest(this, EntityPlayer.class, 8.0F));
         this.tasks.addTask(6, new EntityAILookIdle(this));
@@ -209,7 +211,7 @@ public class EntityChickenExplosive extends EntityChickenBase
      */
     private void explode()
     {
-        if (!this.world.isRemote)
+        if (!this.world.isRemote && !isSafe())
         {
             boolean flag = this.world.getGameRules().getBoolean("mobGriefing");
             this.dead = true;

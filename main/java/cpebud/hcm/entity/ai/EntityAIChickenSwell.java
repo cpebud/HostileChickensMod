@@ -1,5 +1,6 @@
 package cpebud.hcm.entity.ai;
 
+import cpebud.hcm.entity.EntityChickenBase;
 import cpebud.hcm.entity.EntityChickenExplosive;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.ai.EntityAIBase;
@@ -24,7 +25,7 @@ public class EntityAIChickenSwell extends EntityAIBase
     public boolean shouldExecute()
     {
         EntityLivingBase entitylivingbase = this.swellingChicken.getAttackTarget();
-        return this.swellingChicken.getChickenState() > 0 || entitylivingbase != null && this.swellingChicken.getDistanceSq(entitylivingbase) < 9.0D;
+        return (this.swellingChicken.getChickenState() > 0 || entitylivingbase != null && this.swellingChicken.getDistanceSq(entitylivingbase) < 9.0D) && !this.swellingChicken.isSafe();
     }
 
     /**
