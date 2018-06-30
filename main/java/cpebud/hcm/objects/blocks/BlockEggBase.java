@@ -37,7 +37,7 @@ public abstract class BlockEggBase extends Block
 		setCreativeTab(Main.HCMTAB);
 		
 		BlockInit.BLOCKS.add(this);
-		ItemInit.ITEMS.add(new ItemBlock(this).setRegistryName(this.getRegistryName()));
+		ItemInit.ITEMS.add(new ItemBlock(this).setRegistryName(this.getRegistryName()).setMaxStackSize(1));
 	}
 	
 	public void registerModels()

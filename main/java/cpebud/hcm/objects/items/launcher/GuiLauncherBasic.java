@@ -12,11 +12,12 @@ import net.minecraftforge.items.ItemStackHandler;
 public class GuiLauncherBasic extends GuiContainer
 {
 	private static final ResourceLocation TEXTURES = new ResourceLocation(Reference.MODID + ":textures/gui/launcher_basic.png");
-	
+    private final InventoryPlayer playerInventory;
+
 	public GuiLauncherBasic(InventoryPlayer player)
 	{
 		super(new ContainerLauncherBasic(player));
-			
+        this.playerInventory = player;
 	}
 	
 	@Override
@@ -40,7 +41,7 @@ public class GuiLauncherBasic extends GuiContainer
 	@Override
 	protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY)
 	{
-		super.drawGuiContainerForegroundLayer(mouseX, mouseY);
+		this.fontRenderer.drawString(this.playerInventory.getDisplayName().getUnformattedText(), 8, this.ySize - 96 + 2, 4210752);
 	}
 	
 }

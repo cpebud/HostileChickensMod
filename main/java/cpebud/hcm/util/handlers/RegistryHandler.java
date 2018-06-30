@@ -8,6 +8,7 @@ import cpebud.hcm.util.interfaces.IHasModel;
 import cpebud.hcm.world.gen.WorldGenCustomStructures;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
