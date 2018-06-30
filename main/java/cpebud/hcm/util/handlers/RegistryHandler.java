@@ -1,5 +1,6 @@
 package cpebud.hcm.util.handlers;
 
+import cpebud.hcm.Main;
 import cpebud.hcm.init.BlockInit;
 import cpebud.hcm.init.EntityInit;
 import cpebud.hcm.init.ItemInit;
@@ -11,6 +12,7 @@ import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @EventBusSubscriber
@@ -59,5 +61,6 @@ public class RegistryHandler
 	public static void initRegistries()
 	{
 		RenderHandler.registerEntityItemRenders();
+		NetworkRegistry.INSTANCE.registerGuiHandler(Main.instance, new GuiHandler());
 	}
 }

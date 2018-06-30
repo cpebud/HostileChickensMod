@@ -8,6 +8,9 @@ public class Reference
 	
 	public static final String CLIENT = "cpebud.hcm.proxy.ClientProxy";
 	public static final String COMMON = "cpebud.hcm.proxy.CommonProxy";
+	//Launcher IDs
+	private static int LauncherID = 300;
+	public static final int GUI_LAUNCHER_BASIC = LauncherID;
 	
 	//EntityChicken IDs
 	private static int ChickenID = 100;
